@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "sdk": "v5.5.5",
-  "image": "espressif/idf@sha256:a9231d0697ab8f7517cc072e93b7c83e04907bfbfba80b6440d7dbbf90665cf2",
-  "sdk_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+  "sdk": "v5.5.6",
+  "image": "espressif/idf@sha256:bf72fe7a15c22849a9a94147301165a545fb8905d97c176cf748e3e4614cac84",
+  "sdk_commit": "880a203ae603d08a94d06aa01e0d6761958e5e9e",
   "scope": "Unmodified SDK legal notices; not a claim every component is linked",
   "files": [
     {

@@ -48,7 +48,13 @@ int main(void){
  next_scan=0;roaming_tick(604000000,false);roaming_tick(605000000,true);assert(network.roam_attempts==1);
  fake_scan_records[0].bssid[0]=9;next_scan=0;roaming_tick(606000000,false);
  fake_ap.rssi=-60;roaming_tick(607000000,true);assert(network.roam_attempts==1);
- network.connected=false;next_scan=0;roaming_tick(608000000,false);assert(!scanning && weak_since==0);
+ /* SDK 5.5.6 unknown/unparseable authentication is not a secure candidate. */
+ network.rssi=-80;fake_ap.rssi=-80;weak_since=1;next_scan=0;
+ fake_scan_records[0].authmode=WIFI_AUTH_UNKNOWN;
+ roaming_tick(608000000,false);roaming_tick(609000000,true);assert(!scanning && network.roam_attempts==1);
+ fake_scan_records[0].authmode=WIFI_AUTH_MAX;next_scan=0;
+ roaming_tick(610000000,false);roaming_tick(611000000,true);assert(!scanning && network.roam_attempts==1);
+ network.connected=false;next_scan=0;roaming_tick(612000000,false);assert(!scanning && weak_since==0);
  event_handler(NULL,WIFI_EVENT,WIFI_EVENT_SCAN_DONE,NULL);fake_run(network_worker,2);
  puts("PASS network: no implicit stock credentials, pins, sleep readback, reconnects, events, overflow");return 0;
 }

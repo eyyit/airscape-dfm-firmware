@@ -15,9 +15,9 @@ trademark rights. Hardware documentation is referenced rather than copied.
 
 ## Exact external SDK provenance
 
-The build lock is tools/build-env.json: ESP-IDF v5.5.5, source commit
-b774170ff46c393eeb5e495ea37936038d3f4f4f, immutable container digest
-sha256:a9231d0697ab8f7517cc072e93b7c83e04907bfbfba80b6440d7dbbf90665cf2.
+The build lock is tools/build-env.json: ESP-IDF v5.5.6, source commit
+880a203ae603d08a94d06aa01e0d6761958e5e9e, immutable container digest
+sha256:bf72fe7a15c22849a9a94147301165a545fb8905d97c176cf748e3e4614cac84.
 
 third_party/esp-idf contains 46 unmodified legal files copied from that image,
 including its root LICENSE and docs/en/COPYRIGHT.rst. inventory.json records

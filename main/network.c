@@ -46,7 +46,8 @@ static void roaming_tick(int64_t now,bool scan_done) {
         for(unsigned i=0;i<count;i++) {
             wifi_ap_record_t *ap=&records[i];
             if(memcmp(ap->bssid,current.bssid,6)==0 || strcmp((char *)ap->ssid,(char *)station_ssid)!=0 ||
-               ap->authmode<WIFI_AUTH_WPA2_PSK || ap->rssi<ROAM_MIN_DBM ||
+               ap->authmode<WIFI_AUTH_WPA2_PSK || ap->authmode>=WIFI_AUTH_UNKNOWN ||
+               ap->rssi<ROAM_MIN_DBM ||
                ap->rssi-current.rssi<ROAM_GAIN_DB) continue;
             if(best<0 || ap->rssi>records[best].rssi) best=(int)i;
         }
