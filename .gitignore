@@ -1,0 +1,26 @@
+/build*/
+/sdkconfig
+/sdkconfig.old
+/artifacts/
+/provisioning/
+*.pem
+*.key
+*.nvs.bin
+__pycache__/
+*.dfmota
+/releases/
+
+# Private installation inputs and generated output.
+**/deployment.local.h
+/private/
+/.private/
+secrets.*
+*.pcap
+*.pcapng
+*.zip
+*.elf
+*.map
+*.bin
+*.csv
+.venv/
+.ruff_cache/

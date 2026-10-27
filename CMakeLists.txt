@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.16)
+file(STRINGS "${CMAKE_SOURCE_DIR}/VERSION" PROJECT_VER LIMIT_COUNT 1)
+configure_file(main/version.h.in "${CMAKE_BINARY_DIR}/generated/dfm_version.h" @ONLY)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(airscape_dfm)
