@@ -14,7 +14,7 @@ python3 tests/prepare_ota_fixtures.py artifacts/ota-fixtures
 objcopy --rename-section .data=.rodata,alloc,load,readonly,data,contents artifacts/units/ui.o
 objcopy --add-section .note.GNU-stack=/dev/null --set-section-flags .note.GNU-stack=noload,readonly artifacts/units/ui.o
 for module in sensor runtime network servers app ota syslog; do
- cc -std=c11 -D_DEFAULT_SOURCE -Wall -Wextra -Werror -g -O0 --coverage -fprofile-abs-path \
+ cc -std=c11 -D_DEFAULT_SOURCE -DDFM_TESTING -Wall -Wextra -Werror -g -O0 --coverage -fprofile-abs-path \
   -fsanitize=address,undefined -Iartifacts/generated -Itests/fakes/include -Iartifacts/sdk -Imain -Icomponents/dfm_core/include \
   "tests/unit_$module.c" tests/fakes/sdk.c components/dfm_core/dfm_core.c artifacts/sdk/cJSON.c \
   artifacts/units/ui.o -lcrypto -lm -o "artifacts/units/$module"

@@ -70,3 +70,22 @@ class PublicPrivacyTests(unittest.TestCase):
       self.assertIn('DFM_DEVICE_HOSTNAME "custom.example.invalid"', result)
       self.assertIn('DFM_SYSLOG_ADDRESS "192.0.2.2"', result)
       self.assertIn('DFM_SYSLOG_PORT 1514', result)
+      isolated = subprocess.check_output(
+        [
+          'cc',
+          '-E',
+          '-dM',
+          '-x',
+          'c',
+          '-DDFM_TESTING',
+          '-include',
+          str(root / 'device_identity.h'),
+          '/dev/null',
+        ],
+        text=True,
+      )
+      self.assertIn(
+        'DFM_DEVICE_HOSTNAME "dfm-device.example.invalid"', isolated
+      )
+      self.assertIn('DFM_SYSLOG_ADDRESS ""', isolated)
+      self.assertNotIn('custom.example.invalid', isolated)

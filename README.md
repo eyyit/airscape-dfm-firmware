@@ -41,7 +41,10 @@ Default identity is `dfm-device.example.invalid`; syslog is disabled.
 For a private build, copy examples/deployment.local.h.example to the ignored
 main/deployment.local.h and customize identity/syslog there. The header is
 compiled into the binary, so customized binaries also disclose those settings.
-Never distribute such binaries as generic releases.
+Never distribute such binaries as generic releases. Host tests automatically
+set DFM_TESTING so they use synthetic identities and ignore this header.
+Run publication privacy checks in a clean tracked-source checkout; they
+intentionally refuse a working copy with a private deployment header.
 
 Wi-Fi credentials and the OTA public verification key are provisioned in a
 separate NVS partition; private signing keys remain outside this checkout.

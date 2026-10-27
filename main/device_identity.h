@@ -1,5 +1,5 @@
 #pragma once
-#if __has_include("deployment.local.h")
+#if !defined(DFM_TESTING) && __has_include("deployment.local.h")
 #include "deployment.local.h"
 #endif
 #ifndef DFM_DEVICE_HOSTNAME

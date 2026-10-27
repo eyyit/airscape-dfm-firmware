@@ -11,3 +11,7 @@ The SDP810 supplies one differential pressure, not independent port pressures.
 Preserve signed OTA verification, NVS isolation and pressure processing tests.
 No automatic calibration or dirty-filter inference. Do not copy vendor firmware.
 Host tests do not establish hardware, RF, flash timing or power-loss acceptance.
+
+Host tests define DFM_TESTING and must ignore private deployment headers.
+Publication checks intentionally require a clean checkout without the header.
+Never remove a local header simply to make a privacy check pass.
