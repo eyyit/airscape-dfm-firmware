@@ -24,3 +24,6 @@ secrets.*
 *.csv
 .venv/
 .ruff_cache/
+
+# Required public flash layout; other CSVs can contain provisioning secrets.
+!/partitions.csv

@@ -89,3 +89,8 @@ class PublicPrivacyTests(unittest.TestCase):
       )
       self.assertIn('DFM_SYSLOG_ADDRESS ""', isolated)
       self.assertNotIn('custom.example.invalid', isolated)
+
+  def test_clean_source_contains_required_partition_table(self):
+    table = ROOT / 'partitions.csv'
+    self.assertTrue(table.is_file())
+    self.assertIn('dfm_data', table.read_text())
