@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 #include "../main/servers.c"
 #include <assert.h>
 static void initialize(void){fake_reset();json_allocation_failed=false;cJSON_InitHooks(NULL);}

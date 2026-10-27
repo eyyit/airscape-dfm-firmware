@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+# SPDX-License-Identifier: Apache-2.0
 name: Firmware checks
 on: [push, pull_request, workflow_dispatch]
 permissions:
@@ -23,6 +25,8 @@ jobs:
           "$RUNNER_TEMP/dfm-lint/bin/ruff" check tools tests
       - name: Check repository privacy
         run: python3 tools/check_public.py
+      - name: Verify license inventory
+        run: python3 tools/check_licenses.py
       - name: Scan Git history for secrets
         run: |
           docker run --rm --network none -v "$PWD:/repo:ro" \
@@ -36,15 +40,10 @@ jobs:
         run: ./tools/check-reproducible.sh
       - name: Check compiled public artifacts
         run: python3 tools/check_public.py --build build_a
-      - name: Export USB transport bundle
-        run: python3 tools/export_usb.py --build build_a --output artifacts/windows-usb.zip
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: unsigned-development-build
+          name: validation-reports
           path: |
             artifacts/build-manifest.json
             artifacts/coverage/summary.json
-            artifacts/windows-usb.zip
-            build_a/airscape_dfm.elf
-            build_a/airscape_dfm.map
           if-no-files-found: error

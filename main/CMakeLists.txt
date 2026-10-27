@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+# SPDX-License-Identifier: Apache-2.0
 idf_component_register(SRCS "app_main.c" "sensor.c" "runtime.c" "network.c" "metrics.c" "servers.c" "ota.c" "syslog.c"
     INCLUDE_DIRS "." "${CMAKE_BINARY_DIR}/generated"
     REQUIRES dfm_core esp_driver_i2c esp_driver_gpio esp_wifi esp_netif esp_event

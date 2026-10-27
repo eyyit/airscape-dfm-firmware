@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 #include "../main/runtime.c"
 #include <assert.h>
 static void boundary(void){dfm_config_t c;runtime_sensor_config_boundary(&c);}

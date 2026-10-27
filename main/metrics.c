@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 #ifdef DFM_HOST
 #include "../tests/host_runtime.h"
 #else

@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 /* POSIX test adapter. Production metrics.c is compiled unchanged apart from
    headers/port. Its socket state machine and formatter are the firmware code. */
 #pragma once

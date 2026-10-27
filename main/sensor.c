@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 #include "runtime.h"
 #include "driver/i2c_master.h"
 #include "esp_timer.h"

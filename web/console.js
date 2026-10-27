@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 "use strict";
 const $=id=>document.getElementById(id),fmt=(v,n=3)=>Number.isFinite(v)?v.toFixed(n):'—';
 let snapshot=null,lastReceipt=0,busy=false,failed=false;

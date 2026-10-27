@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+# SPDX-License-Identifier: Apache-2.0
 """Local UI fixture only. Never contacts or configures a physical device."""
 
 from http.server import BaseHTTPRequestHandler, HTTPServer

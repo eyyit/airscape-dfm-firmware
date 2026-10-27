@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 /* Independent signed application-only OTA. Never writes bootloader/NVS/eFuses. */
 #include "ota.h"
 #include "runtime.h"

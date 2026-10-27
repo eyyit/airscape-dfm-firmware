@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+# SPDX-License-Identifier: Apache-2.0
 """Unit/fault and local-TLS integration tests. Never contact a real sensor."""
 
 from __future__ import annotations

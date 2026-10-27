@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 #define DFM_SYSLOG_HOST
 static const char *test_syslog_address="";
 #define DFM_SYSLOG_ADDRESS test_syslog_address

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+# SPDX-License-Identifier: Apache-2.0
 """Merge gcov runs across real-module unit tests and the socket
 integration test.
 """

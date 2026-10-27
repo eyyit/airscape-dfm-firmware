@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 #include "../main/ota.c"
 #include <assert.h>
 static uint8_t package[8192],tiny[2048],wrong[8192];static size_t package_len,tiny_len,wrong_len;

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+# SPDX-License-Identifier: Apache-2.0
 """Exercise the actual metrics listener with synthetic snapshots and
 slow peers.
 """

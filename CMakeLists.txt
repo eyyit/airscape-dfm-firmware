@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+# SPDX-License-Identifier: Apache-2.0
 cmake_minimum_required(VERSION 3.16)
 file(STRINGS "${CMAKE_SOURCE_DIR}/VERSION" PROJECT_VER LIMIT_COUNT 1)
 configure_file(main/version.h.in "${CMAKE_BINARY_DIR}/generated/dfm_version.h" @ONLY)

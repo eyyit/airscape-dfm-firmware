@@ -1,0 +1,15 @@
+Independent Firmware for the AirScape DFM
+Copyright 2026 the DFM firmware contributors
+
+Original project code, tests, configuration and documentation are licensed
+under the Apache License, Version 2.0. See LICENSE.
+
+Third-party legal notices under third_party/esp-idf are reproduced verbatim
+from the pinned Espressif ESP-IDF SDK. They retain their original copyright
+and license terms. They are not relicensed by this project. See THIRD_PARTY.md
+and third_party/esp-idf/inventory.json for exact provenance and file hashes.
+
+AirScape, Seeed Studio, Sensirion and Espressif names identify compatible
+hardware or dependencies. This independent project is not sponsored by,
+affiliated with, or an official firmware release from those manufacturers.
+Manufacturer firmware, extracted binaries and decompiler output are excluded.

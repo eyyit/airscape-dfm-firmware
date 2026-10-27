@@ -26,6 +26,7 @@ development headers. The ESP-IDF image is pinned by digest.
 ```sh
 docker pull "$(python3 -c 'import json;print(json.load(open("tools/build-env.json"))["image"])')"
 python3 tools/check_public.py
+python3 tools/check_licenses.py
 ./tools/test-all.sh
 ./tools/check-reproducible.sh
 ```
@@ -61,9 +62,14 @@ LED GPIO15 is active-low. Independently confirm your board revision/wiring.
 Sensor acquisition priority 10 and metrics priority 8 outrank management.
 Host coverage and reproducibility do not replace hardware acceptance tests.
 
-## License status
+## License and contributions
 
-No distribution license has been selected for original project code. Public
-visibility alone does not grant an open-source license. Choose a license and
-complete third-party attribution review before publication. ESP-IDF and linked
-libraries retain their own licenses; see THIRD_PARTY.md.
+Original project code, tests, configuration and documentation are licensed
+under Apache-2.0. See LICENSE, NOTICE and CONTRIBUTING.md. Upstream notices under
+third_party/esp-idf retain their own terms; THIRD_PARTY.md records exact SDK
+provenance. Manufacturer firmware and decompiler output are not distributed.
+
+Initial publication is source-only. CI validates builds and retains validation
+reports, without uploading firmware binaries. Read SECURITY.md for private
+vulnerability reporting and device trust boundaries, and docs/PUBLICATION.md
+for the remaining GitHub settings and separate firmware release process.

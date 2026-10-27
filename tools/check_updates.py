@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+# SPDX-License-Identifier: Apache-2.0
 """Read-only SDK release checker. Never changes a lock, builds or deploys."""
 
 import json

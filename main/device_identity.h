@@ -1,3 +1,6 @@
+/* SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 #pragma once
 #if !defined(DFM_TESTING) && __has_include("deployment.local.h")
 #include "deployment.local.h"

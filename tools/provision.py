@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2026 the DFM firmware contributors
+# SPDX-License-Identifier: Apache-2.0
 """Prepare private initial provisioning offline. Never connects to a device."""
 
 from __future__ import annotations
